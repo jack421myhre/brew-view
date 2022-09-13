@@ -1,1 +1,9 @@
 /* font we are using font-family: 'Source Sans Pro', sans-serif; */
+ img {
+    max-width: 50px;
+ }
+
+ #weatherBtn {
+    display: flex;
+    justify-content: center;
+ }

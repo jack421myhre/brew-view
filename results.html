@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>BrewView Search Results</title>
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <!-- Start Carousel -->
+            <div id="carousel-demo" class="carousel">
+                <div class="item-1" id="my-element-1">
+                    <img src="./assets/images/beer.png" title="beer icons">Beer icons created by Freepik -
+                    Flaticon</img>
+                    <ul id="infoList">
+                        <li id="name"></li>
+                        <li id="type"></li>
+                        <li id="address"></li>
+                        <li id="phone"></li>
+                        <li id="website"></li>
+                    </ul>
+                    <!-- Slide Content -->
+                </div>
+                <div class="item-2" id="my-element-2">
+                    <img src="./assets/images/beer.png" title="beer icons">Beer icons created by Freepik -
+                    Flaticon</img>
+                    <!-- Slide Content -->
+                </div>
+                <div class="item-3" id="my-element-3">
+                    <img src="./assets/images/beer.png" title="beer icons">Beer icons created by Freepik -
+                    Flaticon</img>
+                    <!-- Slide Content -->
+                </div>
+            </div>
+            <!-- End Carousel -->
+        </div>
+    </section>
+
+    <section>
+        <div id="weatherBtn">
+            <button class="button is-large">Click here for weather at your Brewery!</button>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+    <script src="./assets/js/results.js"></script>
+    <script>
+        bulmaCarousel.attach('#carousel-demo', {
+            slidesToScroll: 1,
+            slidesToShow: 4
+        });
+    </script>
+</body>
+
+</html>
