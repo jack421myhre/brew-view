@@ -1,1 +1,13 @@
 /* font we are using font-family: 'Source Sans Pro', sans-serif; */
+
+/* :root {
+    --foam-white: #fff2c2;
+    --dark-gold: #fdc500;
+    --gold: #ffd500;
+    --dark-blue: #003f88;
+} */
+
+#heroSection {
+    background-image: url(./images/beach.jpeg);
+    background-repeat: no-repeat;
+}
