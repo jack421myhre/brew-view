@@ -27,6 +27,7 @@
                     <ul id="infoList">
                         <li id="name"></li>
                         <li id="type"></li>
+                        <li id="city"></li>
                         <li id="address"></li>
                         <li id="phone"></li>
                         <li id="website"></li>
@@ -49,20 +50,27 @@
     </section>
 
     <section>
+        <div class="modal">
         <div class="modal-background"></div>
         <div class="modal-content">
           <div class="control">
-            <input class="input is-hovered" id="city" type="text" placeholder="Hovered input">
+            <p id="temp">Temp</p>
+            <p id="humidity">Humidity</p>
+            <p id="wind">Wind</p>
+            <p id="image">Image</p>
+            <!-- <input class="input is-hovered" id="temp" type="text" placeholder="temp">
           </div>
-          <h4>Or</h4>
           <div class="control">
-            <input class="input is-hovered"  id="postalCode" type="text"  placeholder="Hovered input">
+            <input class="input is-hovered"  id="humidity" type="text"  placeholder="humidity">
           </div>
-          <h4>Or</h4>
           <div class="control">
-            <input class="input is-hovered" id="byName" type="text"  placeholder="Hovered input">
+            <input class="input is-hovered" id="wind" type="text"  placeholder="wind">
           </div>
-        <button class="modal-close is-large" aria-label="close"></button>
+          <div class="control">
+            <input class="input is-hovered" id="image" type="text"  placeholder="image"> -->
+          </div>
+        <button class="modal-close is-large" id="close-button" aria-label="close"></button>
+        </div>
         </div>
         <div id="weatherBtn">
             <button class="button is-large">Click here for weather at your Brewery!</button>
