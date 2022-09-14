@@ -18,6 +18,7 @@ function getBreweries(breweryUrl) {
 
 getBreweries(breweryUrl);
 
+// TESTING
 // event listener
 // searchBtn.addEventListener("click", () => {
 //     modalWindow.classList.add("is-active");
