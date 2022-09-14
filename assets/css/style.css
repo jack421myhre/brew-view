@@ -1,4 +1,14 @@
 /* font we are using font-family: 'Source Sans Pro', sans-serif; */
+<<<<<<< HEAD
+ img {
+    max-width: 50px;
+ }
+
+ #weatherBtn {
+    display: flex;
+    justify-content: center;
+ }
+=======
 
 /* :root {
     --foam-white: #fff2c2;
@@ -11,3 +21,4 @@
     background-image: url(./images/beach.jpeg);
     background-repeat: no-repeat;
 }
+>>>>>>> 88920b3512848f6dab7093eb01566a494e8e7e5e
