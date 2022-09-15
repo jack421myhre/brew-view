@@ -50,23 +50,27 @@
           <!-- BUTTON portion ends -->
         </ul>
       </nav>
-  </main>div></div>
+  </main>
   <div class="modal">
     <div class="modal-background"></div>
-      <div class="modal-content">
+    <div class="modal-content">
+      <form target="_blank" class="searchForm">
         <div class="control">
           <input class="input is-hovered" id="city" type="text" placeholder="Hovered input">
         </div>
         <h4>Or</h4>
-      <div class="control">
-        <input class="input is-hovered" id="postalCode" type="text" placeholder="Hovered input">
-      </div>
-      <h4>Or</h4>
-      <div class="control">
-        <input class="input is-hovered" id="byName" type="text" placeholder="Hovered input">
-      </div>
-      <button class="modal-close is-large" aria-label="close"></button>
+        <div class="control">
+          <input class="input is-hovered" id="postalCode" type="text" placeholder="Hovered input">
+        </div>
+        <h4>Or</h4>
+
+        <button class="button is-warning modal-search">Find my breweries</button>
+        <p id="errorMessage" class="error-message"></p>
+      </form>
+      <!-- <button class="modal-close is-large" aria-label="close"></button> -->
+
     </div>
+    <button class="modal-close is-large" aria-label="close"></button>
   </div>
   </main>
 
@@ -74,7 +78,8 @@
     <div class="card column testiChild is-3">
       <div class="card-content">
         <div class="content">
-          Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eg
+          Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at
+          eg
         </div>
       </div>
     </div>
@@ -105,23 +110,7 @@
       </p>
     </div>
   </footer>
-
   <script src="./assets/js/app.js"></script>
 </body>
 
 </html>
-
-
-<!-- <button class="button is-large" id="searchBtn">Launch</button> -->
-
-<!-- <div class="columns is-12">
-  <div class="testiChild column is-3">
-    <p class="bd-notification is-info">First nested column</p>
-  </div>
-  <div class="testiChild column is-3">
-
-  </div>
-  <div class="testiChild column is-3">
-
-  </div>
-</div> -->
