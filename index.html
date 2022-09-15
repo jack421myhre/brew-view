@@ -38,20 +38,22 @@
     <div class="box">
       Ready to view your next brew?!
       <button class="button is-large" id="searchBtn">Large</button>
-      <div class="modal is-active">
+      <div class="modal">
         <div class="modal-background"></div>
         <div class="modal-content">
-          <div class="control">
-            <input class="input is-hovered" id="city" type="text" placeholder="Hovered input">
-          </div>
-          <h4>Or</h4>
-          <div class="control">
-            <input class="input is-hovered"  id="postalCode" type="text"  placeholder="Hovered input">
-          </div>
-          <h4>Or</h4>
-          <div class="control">
-            <input class="input is-hovered" id="byName" type="text"  placeholder="Hovered input">
-          </div>
+          <form class="searchForm">
+            <div class="control">
+              <input class="input is-hovered" id="city" type="text" placeholder="Hovered input">
+            </div>
+            <h4>Or</h4>
+            <div class="control">
+              <input class="input is-hovered"  id="postalCode" type="text"  placeholder="Hovered input">
+            </div>
+            <h4>Or</h4>
+            
+            <button class="button is-warning modal-search">Find my breweries</button>
+            <p id="errorMessage" class="error-message"></p>
+          </form>
         <button class="modal-close is-large" aria-label="close"></button>
       </div>
     </div>

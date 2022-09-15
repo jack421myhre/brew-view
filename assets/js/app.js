@@ -1,10 +1,44 @@
 // Placeholder until user input is available
-let city = "Houston";
-let searchBtn = document.querySelector("#searchBtn");
+let searchBtn = document.getElementById("searchBtn");
 let modalWindow = document.querySelector(".modal");
+let modalClose = document.querySelector(".modal-close");
+let modalSearch = document.querySelector(".modal-search");
 
-let breweryUrl = "https://api.openbrewerydb.org/breweries?by_city=" + city;
+let searchCity = document.getElementById("city");
+let searchPostal = document.getElementById("postalCode");
+let searchName = document.getElementById("byName");
+let searchForm = document.querySelector(".searchForm");
+
+// let breweryUrl =
+//     "https://api.openbrewerydb.org/breweries?by_city=" + city + "&per_page=3";
+
+searchForm.addEventListener("submit", (e) => {
+    let breweryUrl = "";
+    e.preventDefault();
+    let userCity = searchCity.value;
+    let userPostal = searchPostal.value;
+
+    if (userCity && !userPostal) {
+        breweryUrl =
+            "https://api.openbrewerydb.org/breweries?by_city=" +
+            userCity +
+            "&per_page=3";
+    } else if (userPostal && !userCity) {
+        breweryUrl =
+            "https://api.openbrewerydb.org/breweries?by_postal=" +
+            userPostal +
+            "&per_page=3";
+    } else {
+        document.getElementById("errorMessage").textContent =
+            "EITHER city or postal.";
+    }
+    console.log(breweryUrl);
+    getBreweries(breweryUrl);
+});
+
+// API call
 function getBreweries(breweryUrl) {
+    console.log("test");
     fetch(breweryUrl)
         .then((response) => {
             return response.json();
@@ -15,11 +49,13 @@ function getBreweries(breweryUrl) {
             console.log(zip);
         });
 }
+// getBreweries(breweryUrl);
 
-getBreweries(breweryUrl);
-
-// TESTING
 // event listener
-// searchBtn.addEventListener("click", () => {
-//     modalWindow.classList.add("is-active");
-// });
+searchBtn.addEventListener("click", () => {
+    modalWindow.classList.add("is-active");
+});
+
+modalClose.addEventListener("click", () => {
+    modalWindow.classList.remove("is-active");
+});
