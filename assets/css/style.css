@@ -1,4 +1,12 @@
 /* font we are using font-family: 'Source Sans Pro', sans-serif; */
+ img {
+    max-width: 50px;
+ }
+
+ #weatherBtn {
+    display: flex;
+    justify-content: center;
+ }
 
 /* :root {
     --foam-white: #fff2c2;
@@ -137,3 +145,4 @@ section.hero {
 /* .columns.is-12 {
     justify-content: space-around;
 } */
+
