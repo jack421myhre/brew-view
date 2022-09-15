@@ -17,48 +17,84 @@
 </head>
 
 <body>
-    <section class="section">
-        <div class="container">
-            <!-- Start Carousel -->
-            <div id="carousel-demo" class="carousel">
-                <div class="item-1" id="my-element-1">
-                    <img src="./images/beer.png" title="beer icons">Beer icons created by Freepik -
-                    Flaticon</img>
-                    <ul id="infoList">
-                        <li id="name"></li>
-                        <li id="type"></li>
-                        <li id="city"></li>
-                        <li id="address"></li>
-                        <li id="phone"></li>
-                        <li id="website"></li>
-                    </ul>
-                    <!-- Slide Content -->
-                </div>
-                <div class="item-2" id="my-element-2">
-                    <img src="./images/beer.png" title="beer icons">Beer icons created by Freepik -
-                    Flaticon</img>
-                    <!-- Slide Content -->
-                </div>
-                <div class="item-3" id="my-element-3">
-                    <img src="./images/beer.png" title="beer icons">Beer icons created by Freepik -
-                    Flaticon</img>
-                    <!-- Slide Content -->
-                </div>
+    <header>
+        <div class="container is-full">
+            <div class="notification is-primary is-full">
+                <strong>BrewView</strong>
             </div>
-            <!-- End Carousel -->
         </div>
-    </section>
-
-    <section>
-        <div class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-          <div class="control">
-            <p id="temp">Temp</p>
-            <p id="humidity">Humidity</p>
-            <p id="wind">Wind</p>
-            <p id="image">Image</p>
-            <!-- <input class="input is-hovered" id="temp" type="text" placeholder="temp">
+    </header>
+    <main>
+        <section class="section">
+            <div class="container">
+                <!-- Start Carousel -->
+                <div id="carousel-demo" class="carousel">
+                    <div class="item-1" id="my-element-1">
+                        <img src="./images/beer.png" title="beer icons" Beer icons created by Freepik - Flaticon></img>
+                        <ul id="infoList1">
+                            <li id="name"></li>
+                            <li id="type"></li>
+                            <li id="city"></li>
+                            <li id="address"></li>
+                            <li id="phone"></li>
+                            <li id="website"></li>
+                        </ul>
+                        <!-- Slide Content -->
+                    </div>
+                    <div class="item-2" id="my-element-2">
+                        <img src="./images/beer.png" title="beer icons" Beer icons created by Freepik - Flaticon></img>
+                        <ul id="infoList2">
+                            <li id="name"></li>
+                            <li id="type"></li>
+                            <li id="city"></li>
+                            <li id="address"></li>
+                            <li id="phone"></li>
+                            <li id="website"></li>
+                        </ul>
+                        <!-- Slide Content -->
+                    </div>
+                    <div class="item-3" id="my-element-3">
+                        <img src="./images/beer.png" title="beer icons" Beer icons created by Freepik - Flaticon></img>
+                        <ul id="infoList3">
+                            <li id="name"></li>
+                            <li id="type"></li>
+                            <li id="city"></li>
+                            <li id="address"></li>
+                            <li id="phone"></li>
+                            <li id="website"></li>
+                        </ul>
+                        <!-- Slide Content -->
+                    </div>
+                </div>
+                <!-- End Carousel -->
+            </div>
+        </section>
+        <div id="weatherBtn">
+            <div class="box container">
+                Weather at your
+                <nav>
+                    <ul>
+                        <!-- BUTTON portion begins -->
+                        <li>
+                            BREW
+                            <span></span><span></span><span></span><span></span>
+                        </li>
+                        <!-- BUTTON portion ends -->
+                    </ul>
+                </nav>
+            </div>
+            <!-- <button class="button is-large">Click here for weather at your Brewery!</button> -->
+        </div>
+        <section>
+            <div class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-content">
+                    <ul class="control" id="weatherList">
+                        <li id="temp">Temp</li>
+                        <li id="humidity">Humidity</li>
+                        <li id="wind">Wind</li>
+                        <li id="image">Image</li>
+                        <!-- <input class="input is-hovered" id="temp" type="text" placeholder="temp">
           </div>
           <div class="control">
             <input class="input is-hovered"  id="humidity" type="text"  placeholder="humidity">
@@ -68,14 +104,21 @@
           </div>
           <div class="control">
             <input class="input is-hovered" id="image" type="text"  placeholder="image"> -->
-          </div>
-        <button class="modal-close is-large" id="close-button" aria-label="close"></button>
+                    </ul>
+                    <button class="modal-close is-large" id="close-button" aria-label="close"></button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer" id="#footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+                is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+            </p>
         </div>
-        </div>
-        <div id="weatherBtn">
-            <button class="button is-large">Click here for weather at your Brewery!</button>
-        </div>
-    </section>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
     <script src="./assets/js/results.js"></script>
