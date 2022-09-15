@@ -17,8 +17,8 @@
             <div class="notification is-primary">
               This container is <strong>centered</strong> on desktop and larger viewports.
   <header>
-    <div class="container">
-      <div class="notification is-primary">
+    <div class="container is-full">
+      <div class="notification is-primary is-full">
         <strong>BrewView</strong>
       </div>
     </div>
@@ -34,10 +34,20 @@
       </p>
     </div>
   </section>
+
   <main>
-    <div class="box">
-      Ready to view your next brew?!
-      <button class="button is-large" id="searchBtn">Large</button>
+    <div class="box container">
+      Ready to view your next
+      <nav>
+        <ul>
+          <!-- BUTTON portion begins -->
+          <li id="searchBtn">
+            BREW
+            <span></span><span></span><span></span><span></span>
+          </li>
+          <!-- BUTTON portion ends -->
+        </ul>
+      </nav>
       <div class="modal">
         <div class="modal-background"></div>
         <div class="modal-content">
@@ -59,23 +69,42 @@
     </div>
   </main>
   
-  <section>
-    <div class="box">
-      <article class="media">
-        <div class="media-left">
-          <figure class="image is-64x64">
-            <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
-          </figure>
-        </div>
-        <div class="media-content">
+    <div class="columns is-12">
+      <div class="card column testiChild is-3">
+        <div class="card-content">
           <div class="content">
-            <p>
-              <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
-              <br>
-              Lorem ipsum dolor sit amet, consectetu
-            </p>
+            Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eg
           </div>
-          <nav class="level is-mobile">
+        </div>
+      </div>
+      <div class="card column testiChild is-3">
+        <div class="card-content">
+          <div class="content">
+            Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at
+          </div>
+        </div>
+      </div>
+      <div class="card column testiChild is-3">
+        <div class="card-content">
+          <div class="content">
+            Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravid
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <!-- Footer portion begins -->
+  <footer class="footer" id="#footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+      </p>
+    </div>
+  </footer>
+          <!-- <nav class="level is-mobile">
             <div class="level-left">
               <a class="level-item" aria-label="reply">
                 <span class="icon is-small">
@@ -94,47 +123,23 @@
               </a>
             </div>
         </div>
-    </header>
+    </header> -->
    <script src="./assets/js/app.js"></script>
 </body>
 </html>
 
-<!-- box (from bulma) being used as testimonial box -->
-<!-- <div class="box">
-  <article class="media">
-    <div class="media-left">
-      <figure class="image is-64x64">
-        <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
-      </figure>
-    </div>
-    <div class="media-content">
-      <div class="content">
-        <p>
-          <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
-          <br>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
-        </p>
-      </div>
-      <nav class="level is-mobile">
-        <div class="level-left">
-          <a class="level-item" aria-label="reply">
-            <span class="icon is-small">
-              <i class="fas fa-reply" aria-hidden="true"></i>
-            </span>
-          </a>
-          <a class="level-item" aria-label="retweet">
-            <span class="icon is-small">
-              <i class="fas fa-retweet" aria-hidden="true"></i>
-            </span>
-          </a>
-          <a class="level-item" aria-label="like">
-            <span class="icon is-small">
-              <i class="fas fa-heart" aria-hidden="true"></i>
-            </span>
-          </a>
-        </div>
-      </nav>
-    </div>
-  </article>
+
+<!-- <button class="button is-large" id="searchBtn">Launch</button> -->
+
+<!-- <div class="columns is-12">
+  <div class="testiChild column is-3">
+    <p class="bd-notification is-info">First nested column</p>
+  </div>
+  <div class="testiChild column is-3">
+
+  </div>
+  <div class="testiChild column is-3">
+
+  </div>
 </div> -->
 
