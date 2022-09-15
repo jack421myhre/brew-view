@@ -18,6 +18,8 @@ searchForm.addEventListener("submit", (e) => {
     let userCity = searchCity.value;
     let userPostal = searchPostal.value;
 
+    // Add this function for the if block
+    // checkSearch();
     if (userCity && !userPostal) {
         breweryUrl =
             "https://api.openbrewerydb.org/breweries?by_city=" +
@@ -34,11 +36,11 @@ searchForm.addEventListener("submit", (e) => {
     }
     console.log(breweryUrl);
     getBreweries(breweryUrl);
+    // window.location.href = "results.html";
 });
 
 // API call
 function getBreweries(breweryUrl) {
-    console.log("test");
     fetch(breweryUrl)
         .then((response) => {
             return response.json();
@@ -52,7 +54,8 @@ function getBreweries(breweryUrl) {
 // getBreweries(breweryUrl);
 
 // event listener
-searchBtn.addEventListener("click", () => {
+searchBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
     modalWindow.classList.add("is-active");
 });
 
