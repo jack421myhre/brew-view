@@ -1,4 +1,6 @@
-// Placeholder until user input is available
+// -----------------------------------------
+// ------------- DOM ELEMENTS --------------
+// -----------------------------------------
 let searchBtn = document.getElementById("searchBtn");
 let modalWindow = document.querySelector(".modal");
 let modalClose = document.querySelector(".modal-close");
@@ -9,9 +11,37 @@ let searchPostal = document.getElementById("postalCode");
 let searchName = document.getElementById("byName");
 let searchForm = document.querySelector(".searchForm");
 
-// let breweryUrl =
-//     "https://api.openbrewerydb.org/breweries?by_city=" + city + "&per_page=3";
+// -----------------------------------------
+// -------- API CALL AND FUNCTIONS ---------
+// -----------------------------------------
+function getBreweries(breweryUrl) {
+    fetch(breweryUrl)
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            console.log(data);
+            storedSearch(data);
+        });
+}
 
+function storedSearch(data) {
+    for (let i = 0; i < data.length; i++) {
+        let searchData = {
+            name: data[i].name,
+            type: data[i].brewery_type,
+            city: data[i].city,
+            address: data[i].street,
+            phone: data[i].phone,
+            website: data[i].website_url,
+        };
+        localStorage.setItem("searchData", JSON.stringify(searchData));
+    }
+}
+
+// -----------------------------------------
+// ----------- EVENT LISTENERS -------------
+// -----------------------------------------
 searchForm.addEventListener("submit", (e) => {
     let breweryUrl = "";
     e.preventDefault();
@@ -36,24 +66,10 @@ searchForm.addEventListener("submit", (e) => {
     }
     console.log(breweryUrl);
     getBreweries(breweryUrl);
+
     // window.location.href = "results.html";
 });
 
-// API call
-function getBreweries(breweryUrl) {
-    fetch(breweryUrl)
-        .then((response) => {
-            return response.json();
-        })
-        .then((data) => {
-            console.log(data);
-            let zip = data[0].postal_code;
-            console.log(zip);
-        });
-}
-// getBreweries(breweryUrl);
-
-// event listener
 searchBtn.addEventListener("click", (e) => {
     e.stopPropagation();
     modalWindow.classList.add("is-active");
