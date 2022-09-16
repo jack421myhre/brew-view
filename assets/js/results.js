@@ -22,8 +22,9 @@ if (element && element.bulmaCarousel) {
 //WEATHER CODE
 // Placeholder until user input is available
 let apiKey = "&appid=d34f0b45996f55d571b6eceb335266c3";
-let city = "Houston"; //document.querySelector("#city");
+let city = "Houston"; //JSON.parse(localStorage.getItem("searchCity")) [];
 let queryUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city +"&units=imperial" + apiKey;
+let weatherBox = document.querySelector("#weatherList");
 let weatherBtn = document.querySelector("#weatherBtn");
 let modalWindow = document.querySelector(".modal");
 
@@ -37,9 +38,18 @@ function getWeather(queryUrl) {
             return response.json();
         })
         .then((data) => {
-            console.log(data);
-            // let zip = data[0].postal_code;
-            // console.log(zip);
+            // weatherBox.textContent = ""
+			let temp = document.getElementById("temp");
+			let humidity = document.querySelector("#humidity");
+			let wind = document.querySelector("#wind");
+			let icon = data.weather[0].icon;
+			let iconImg = document.createElement("img");
+			// let image = document.querySelector("#image");
+			iconImg.setAttribute("src","https://openweathermap.org/img/wn/" + icon + "@2x.png")
+			temp.textContent = data.main.temp;
+			humidity.textContent = data.main.humidity;
+			wind.textContent = data.wind.speed;
+
         });
 }
 
