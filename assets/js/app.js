@@ -25,7 +25,9 @@ function getBreweries(breweryUrl) {
         });
 }
 
+// Sets the local storage with recent user search.
 function storedSearch(data) {
+    let breweryList = [];
     for (let i = 0; i < data.length; i++) {
         let searchData = {
             name: data[i].name,
@@ -35,8 +37,9 @@ function storedSearch(data) {
             phone: data[i].phone,
             website: data[i].website_url,
         };
-        localStorage.setItem("searchData", JSON.stringify(searchData));
+        breweryList.push(searchData);
     }
+    localStorage.setItem("breweryList", JSON.stringify(breweryList));
 }
 
 // -----------------------------------------
@@ -62,7 +65,7 @@ searchForm.addEventListener("submit", (e) => {
             "&per_page=3";
     } else {
         document.getElementById("errorMessage").textContent =
-            "EITHER city or postal.";
+            "Please use only ONE field to search.";
     }
     console.log(breweryUrl);
     getBreweries(breweryUrl);
