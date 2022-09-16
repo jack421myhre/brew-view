@@ -15,6 +15,7 @@ let searchForm = document.querySelector(".searchForm");
 // -------- API CALL AND FUNCTIONS ---------
 // -----------------------------------------
 function getBreweries(breweryUrl) {
+    console.log(breweryUrl);
     fetch(breweryUrl)
         .then((response) => {
             return response.json();
@@ -40,14 +41,15 @@ function storedSearch(data) {
         breweryList.push(searchData);
     }
     localStorage.setItem("breweryList", JSON.stringify(breweryList));
+    window.location.href = "results.html";
 }
 
 // -----------------------------------------
 // ----------- EVENT LISTENERS -------------
 // -----------------------------------------
 searchForm.addEventListener("submit", (e) => {
-    let breweryUrl = "";
     e.preventDefault();
+    let breweryUrl = "";
     let userCity = searchCity.value;
     let userPostal = searchPostal.value;
 
@@ -69,8 +71,6 @@ searchForm.addEventListener("submit", (e) => {
     }
     console.log(breweryUrl);
     getBreweries(breweryUrl);
-
-    // window.location.href = "results.html";
 });
 
 searchBtn.addEventListener("click", (e) => {
