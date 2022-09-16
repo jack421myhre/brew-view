@@ -20,12 +20,24 @@ body {
 background-color: #fff2c2;
 }
 
+.button.is-black {
+    border: 1px solid goldenrod;
+    color: goldenrod;
+}
+
 .notification.is-primary {
     background-color: var(--black) ;
     color: var(--golden);
     border-radius: 0;
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid goldenrod;
+    margin-bottom: auto;
+}
+
+strong {
+    border-bottom: 1px solid goldenrod;
+    margin-bottom: auto;
 }
 
 #heroSection {
