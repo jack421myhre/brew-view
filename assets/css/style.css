@@ -1,47 +1,65 @@
-/* font we are using font-family: 'Source Sans Pro', sans-serif; */
- img {
-    max-width: 50px;
- }
-
- #weatherBtn {
-    display: flex;
-    justify-content: center;
- }
-
 :root {
     --foam-white: #fff2c2;
     --golden: goldenrod;
     --gold: #ffd500;
-    --dark-blue: #003f88;
     --black: black;
 }
 
-body {
-background-color: #fff2c2;
+img {
+    max-width: 50px;
 }
 
-.button.is-black {
-    border: 1px solid goldenrod;
-    color: goldenrod;
+#weatherBtn {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background-color: var(--foam-white);
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.custom-btn {
+    border: 1px solid var(--golden);
+    background-color: black;
+    color: var(--golden);
+}
+
+.custom-btn:hover {
+    color: black;
+    background-color: var(--golden);
+    font-weight: bold;
 }
 
 .notification.is-primary {
-    background-color: var(--black) ;
+    background-color: var(--black);
     color: var(--golden);
     border-radius: 0;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid goldenrod;
+    border-bottom: 1px solid var(--golden);
     margin-bottom: auto;
 }
 
 strong {
-    border-bottom: 1px solid goldenrod;
+    font-size: 24px;
+    border-bottom: 1px solid var(--golden);
     margin-bottom: auto;
 }
 
+.custom-title {
+    font-size: 52px;
+    font-weight: 500;
+}
+
+.subtitle {
+    font-weight: 300;
+    font-size: 24px;
+}
+
 #heroSection {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/beer.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(../images/beer.jpeg);
     height: 50%;
     background-position: center;
     background-repeat: no-repeat;
@@ -56,12 +74,23 @@ strong {
     justify-content: center;
     background-color: black;
     color: var(--golden);
-    font-size: 16px;
+    font-size: 18px;
     text-transform: uppercase;
     font-weight: bold;
-    font-family: sans-serif;
     border-radius: 0.5em;
 }
+
+/* changes button and text alignment for smaller screens */
+@media screen and (max-width: 722px) {
+    .box.container {
+        flex-direction: column;
+    }
+}
+
+.searchBtn:hover {
+    cursor: pointer;
+}
+
 /* Button */
 nav ul {
     list-style-type: none;
@@ -70,16 +99,14 @@ nav ul {
 }
 
 nav ul li {
-    --c: goldenrod;
-    color: var(--c);
+    color: var(--golden);
     font-size: 16px;
-    border: 0.3em solid var(--c);
+    border: 0.3em solid var(--golden);
     border-radius: 0.5em;
     width: 12em;
     height: 3em;
     text-transform: uppercase;
     font-weight: bold;
-    font-family: sans-serif;
     letter-spacing: 0.1em;
     text-align: center;
     line-height: 2.4em;
@@ -94,7 +121,7 @@ nav ul li span {
     position: absolute;
     width: 25%;
     height: 100%;
-    background-color: var(--c);
+    background-color: var(--golden);
     transform: translateY(150%);
     border-radius: 50%;
     left: calc((var(--n) - 1) * 25%);
@@ -128,30 +155,38 @@ nav ul li span:nth-child(4) {
 }
 /* BUTTON ends */
 
-
 section.hero {
     margin-bottom: 50px;
 }
 
 .box {
-    width:50%;
+    width: 50%;
 }
 
 .testiChild {
     /* width: 50px; */
-    height: 240px;
-    border: 1px solid black;
+    height: 260px;
     margin-top: 75px;
     margin-bottom: 50px;
-    border-radius: .5em;
-    
+    border-radius: 0.5em;
+    box-shadow: 0px 8px 10px #777;
 }
 
 .columns.is-12 {
     justify-content: space-evenly;
 }
 
-.footer{
+.custom-review {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.author {
+    text-align: right;
+    font-weight: bold;
+}
+
+.footer {
     left: 0;
     bottom: 0;
     width: 100vw;
@@ -159,11 +194,3 @@ section.hero {
     background-color: var(--black);
     color: #fff2c2;
 }
-
-
-
-
-/* .columns.is-12 {
-    justify-content: space-around;
-} */
-
