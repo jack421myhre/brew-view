@@ -221,6 +221,10 @@ section.hero {
     box-shadow: 0px 8px 10px #777;
 }
 
+.custom-results {
+    color:  var(--golden);
+}
+
 .columns.is-12 {
     justify-content: space-evenly;
 }
