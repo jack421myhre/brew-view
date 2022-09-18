@@ -14,6 +14,10 @@ img {
     justify-content: center;
 }
 
+#weatherBtn:hover {
+    cursor: pointer;
+}
+
 body {
     background-color: var(--foam-white);
     font-family: "Source Sans Pro", sans-serif;
@@ -163,13 +167,17 @@ section.hero {
     width: 50%;
 }
 
-.testiChild {
+.testimChild {
     /* width: 50px; */
     height: 260px;
     margin-top: 75px;
     margin-bottom: 50px;
     border-radius: 0.5em;
     box-shadow: 0px 8px 10px #777;
+}
+
+.custom-results {
+    color:  var(--golden);
 }
 
 .columns.is-12 {
